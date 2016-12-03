@@ -15,6 +15,10 @@ using System.Windows.Forms;
 /// </summary>
 namespace Hello_C_Sharp_Win
 {
+     /// <summary>
+     /// Operation Type
+     /// </summary>
+     public enum Operators { Add, Sub, Multi, Div };
 
      /// <summary>
      /// 
@@ -23,7 +27,7 @@ namespace Hello_C_Sharp_Win
      {
           public int Result = 0;
           public bool isNewNum = true;
-
+          public Operators Opt = Operators.Add;
 
           /// <summary>
           /// 생성자.
@@ -106,16 +110,27 @@ namespace Hello_C_Sharp_Win
 
 
 
-          private void NumPlus_Click(object sender, EventArgs e)
+          private void NumOperation_Click(object sender, EventArgs e)
           {
-               //Int.Parse(string) : String => Int
-               int num = int.Parse(NumScreen.Text);
-               Result += num;
+               if (isNewNum == false)
+               {
+                    //Int.Parse(string) : String => Int
+                    int num = int.Parse(NumScreen.Text);
+                    if (Opt == Operators.Add)
+                         Result += num;
+                    else if (Opt == Operators.Sub)
+                         Result -= num;
 
-               //dataType.ToString() : DataType => String
-               NumScreen.Text = Result.ToString();
-               isNewNum = true;
+                    //dataType.ToString() : DataType => String
+                    NumScreen.Text = Result.ToString();
+                    isNewNum = true;
+               }
+              
+               Button optButton = (Button)sender;
+               if (optButton.Text == "+")
+                    Opt = Operators.Add;
+               else if (optButton.Text == "-")
+                    Opt = Operators.Sub;
           }
-
      }
 }

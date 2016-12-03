@@ -40,6 +40,7 @@
                this.Number8 = new System.Windows.Forms.Button();
                this.Number9 = new System.Windows.Forms.Button();
                this.Number0 = new System.Windows.Forms.Button();
+               this.NumMinus = new System.Windows.Forms.Button();
                this.SuspendLayout();
                // 
                // Number1
@@ -82,7 +83,7 @@
                this.NumPlus.TabIndex = 3;
                this.NumPlus.Text = "+";
                this.NumPlus.UseVisualStyleBackColor = true;
-               this.NumPlus.Click += new System.EventHandler(this.NumPlus_Click);
+               this.NumPlus.Click += new System.EventHandler(this.NumOperation_Click);
                // 
                // Number3
                // 
@@ -164,11 +165,22 @@
                this.Number0.UseVisualStyleBackColor = true;
                this.Number0.Click += new System.EventHandler(this.Number1_Click);
                // 
+               // NumMinus
+               // 
+               this.NumMinus.Location = new System.Drawing.Point(57, 114);
+               this.NumMinus.Name = "NumMinus";
+               this.NumMinus.Size = new System.Drawing.Size(41, 41);
+               this.NumMinus.TabIndex = 12;
+               this.NumMinus.Text = "-";
+               this.NumMinus.UseVisualStyleBackColor = true;
+               this.NumMinus.Click += new System.EventHandler(this.NumOperation_Click);
+               // 
                // Calculator
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(204, 378);
+               this.Controls.Add(this.NumMinus);
                this.Controls.Add(this.Number0);
                this.Controls.Add(this.Number9);
                this.Controls.Add(this.Number8);
@@ -201,6 +213,7 @@
           private System.Windows.Forms.Button Number8;
           private System.Windows.Forms.Button Number9;
           private System.Windows.Forms.Button Number0;
+          private System.Windows.Forms.Button NumMinus;
      }
 }
 
