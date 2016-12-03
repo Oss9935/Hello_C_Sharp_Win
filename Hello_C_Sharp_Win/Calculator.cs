@@ -132,5 +132,14 @@ namespace Hello_C_Sharp_Win
                else if (optButton.Text == "-")
                     Opt = Operators.Sub;
           }
+
+          private void ClearButton_Click(object sender, EventArgs e)
+          {
+               Result = 0;
+               isNewNum = true;
+               Opt = Operators.Add;
+
+               NumScreen.Text = "0";
+          }
      }
 }
