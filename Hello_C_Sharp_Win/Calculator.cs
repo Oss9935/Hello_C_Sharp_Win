@@ -38,28 +38,9 @@ namespace Hello_C_Sharp_Win
           /// <param name="e"></param>
           private void HelloLable_Click(object sender, EventArgs e)
           {
-               HelloLable.Text = "Hello C#";
-
-               int number1 = 1;
-               int number2 = 2;
-
-               int sum = number1 + number2;
-
-               HelloLable.Text = sum.ToString();
-
-
+               HelloLable.Text = "Hello C# _ Made by BBKIM";
           }
 
-
-          /// <summary>
-          /// 
-          /// </summary>
-          /// <param name="sender"></param>
-          /// <param name="e"></param>
-          private void Calculator_Load(object sender, EventArgs e)
-          {
-
-          }
 
           /// <summary>
           /// Result : get sum of two event args
@@ -71,9 +52,22 @@ namespace Hello_C_Sharp_Win
                int number1 = Convert.ToInt32(Input1.Text);
                int number2 = Convert.ToInt32(Input2.Text);
 
-               int sum = number1 + number2;
+               int sum = Add(number1, number2);
 
                ResultOutput.Text = sum.ToString();
+          }
+
+
+          /// <summary>
+          /// return sum of two parm
+          /// </summary>
+          /// <param name="number1"></param>
+          /// <param name="number2"></param>
+          /// <returns></returns>
+          public int Add(int number1, int number2)
+          {
+               int sum = number1 + number2;
+               return sum;
           }
      }
 }
