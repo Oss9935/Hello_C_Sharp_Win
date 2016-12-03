@@ -65,6 +65,13 @@ namespace Hello_C_Sharp_Win
                return sub;
           }
 
+
+
+          /// <summary>
+          /// number button 0~9
+          /// </summary>
+          /// <param name="sender"></param>
+          /// <param name="e"></param>
           private void Number1_Click(object sender, EventArgs e)
           {
                SetNum("1");
@@ -76,8 +83,51 @@ namespace Hello_C_Sharp_Win
                SetNum("2");
           }
 
+
+          private void Number3_Click(object sender, EventArgs e)
+          {
+               SetNum("3");
+          }
+
+          private void Number4_Click(object sender, EventArgs e)
+          {
+               SetNum("4");
+          }
+
+          private void Number5_Click(object sender, EventArgs e)
+          {
+               SetNum("5");
+          }
+
+          private void Number6_Click(object sender, EventArgs e)
+          {
+               SetNum("6");
+          }
+
+          private void Number7_Click(object sender, EventArgs e)
+          {
+               SetNum("7");
+          }
+
+          private void Number8_Click(object sender, EventArgs e)
+          {
+               SetNum("8");
+          }
+
+          private void Number9_Click(object sender, EventArgs e)
+          {
+               SetNum("9");
+          }
+
+          private void Number0_Click(object sender, EventArgs e)
+          {
+               SetNum("0");
+          }
+
+
+
           /// <summary>
-          /// single single number to display 
+          /// single input number to display 
           /// </summary>
           /// <param name="num"></param>
           public void SetNum(string num)
@@ -98,6 +148,9 @@ namespace Hello_C_Sharp_Win
                
           }
 
+
+
+
           private void NumPlus_Click(object sender, EventArgs e)
           {
                //Int.Parse(string) : String => Int
@@ -108,5 +161,6 @@ namespace Hello_C_Sharp_Win
                NumScreen.Text = Result.ToString();
                isNewNum = true;
           }
+
      }
 }
