@@ -41,9 +41,9 @@
                this.HelloLable.Cursor = System.Windows.Forms.Cursors.Hand;
                this.HelloLable.Location = new System.Drawing.Point(25, 31);
                this.HelloLable.Name = "HelloLable";
-               this.HelloLable.Size = new System.Drawing.Size(105, 12);
+               this.HelloLable.Size = new System.Drawing.Size(67, 12);
                this.HelloLable.TabIndex = 0;
-               this.HelloLable.Text = "여기를 클락하세요";
+               this.HelloLable.Text = "Click Here!";
                this.HelloLable.CursorChanged += new System.EventHandler(this.HelloLable_Click);
                this.HelloLable.Click += new System.EventHandler(this.HelloLable_Click);
                // 
@@ -89,8 +89,7 @@
                this.Controls.Add(this.Input1);
                this.Controls.Add(this.HelloLable);
                this.Name = "Calculator";
-               this.Text = "Form1";
-               this.Load += new System.EventHandler(this.Calculator_Load);
+               this.Text = "Calculator";
                this.ResumeLayout(false);
                this.PerformLayout();
 
