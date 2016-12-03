@@ -21,79 +21,18 @@ namespace Hello_C_Sharp_Win
      /// </summary>
      public partial class Calculator : Form
      {
+          public int Result = 0;
+          public bool isNewNum = true;
+
 
           /// <summary>
-          /// 
+          /// 생성자.
           /// </summary>
           public Calculator()
           {
                InitializeComponent();
           }
-
-          /// <summary>
-          /// lable1 클릭 시 발생하는 이벤트 핸들러
-          /// 
-          /// </summary>
-          /// <param name="sender"></param>
-          /// <param name="e"></param>
-          private void HelloLable_Click(object sender, EventArgs e)
-          {
-               HelloLable.Text = "Hello C# _ Made by BBKIM";
-          }
-
-
-          /// <summary>
-          /// Result : get sum of two event args
-          /// </summary>
-          /// <param name="sender"></param>
-          /// <param name="e"></param>
-          private void getResultButton_Click(object sender, EventArgs e)
-          {
-               int number1 = 0;
-               int number2 = 0;
-
-               //validation check : Null, Whitespace
-               if (String.IsNullOrWhiteSpace(Input1.Text))
-               {
-                    MessageBox.Show("Input Format Error");
-                    Input1.Focus();
-                    return;
-               }
-
-               //validation check : Null, Whitespace
-               if (String.IsNullOrWhiteSpace(Input2.Text))
-               {
-                    MessageBox.Show("Input Format Error");
-                    Input2.Focus();
-                    return;
-               }
-               
-               //validation check : string(Not Number)
-               if (int.TryParse(Input1.Text, out number1) == false)
-               {
-                    MessageBox.Show("Input Format Error");
-                    Input1.SelectAll();
-                    Input1.Focus();
-                    return;
-               }
-
-               //validation check : string(Not Number)
-               if(int.TryParse(Input2.Text, out number2) == false)
-               {
-                    MessageBox.Show("Input Format Error");
-                    Input2.SelectAll();
-                    Input2.Focus();
-                    return;
-               }
-
-               Convert.ToInt32(Input1.Text);
-               Convert.ToInt32(Input2.Text);
-
-               int sum = Add(number1, number2);
-
-               ResultOutput.Text = sum.ToString();
-          }
-
+          
 
           /// <summary>
           /// return sum of two int parm
@@ -114,7 +53,7 @@ namespace Hello_C_Sharp_Win
           /// <param name="number1"></param>
           /// <param name="number2"></param>
           /// <returns></returns>
-          public float Add2(float number1, float number2)
+          public float Add(float number1, float number2)
           {
                float sum = number1 + number2;
                return sum;
@@ -126,6 +65,48 @@ namespace Hello_C_Sharp_Win
                return sub;
           }
 
+          private void Number1_Click(object sender, EventArgs e)
+          {
+               SetNum("1");
 
+          }
+
+          private void Number2_Click(object sender, EventArgs e)
+          {
+               SetNum("2");
+          }
+
+          /// <summary>
+          /// single single number to display 
+          /// </summary>
+          /// <param name="num"></param>
+          public void SetNum(string num)
+          {
+               if (isNewNum)
+               {
+                    NumScreen.Text = num;
+                    isNewNum = false;
+               }
+               else if (NumScreen.Text == "0")
+               {
+                    NumScreen.Text = num;
+               }
+               else
+               {
+                    NumScreen.Text = NumScreen.Text + num;
+               }     
+               
+          }
+
+          private void NumPlus_Click(object sender, EventArgs e)
+          {
+               //Int.Parse(string) : String => Int
+               int num = int.Parse(NumScreen.Text);
+               Result += num;
+
+               //dataType.ToString() : DataType => String
+               NumScreen.Text = Result.ToString();
+               isNewNum = true;
+          }
      }
 }

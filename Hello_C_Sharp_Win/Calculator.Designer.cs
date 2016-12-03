@@ -28,80 +28,75 @@
           /// </summary>
           private void InitializeComponent()
           {
-               this.HelloLable = new System.Windows.Forms.Label();
-               this.Input1 = new System.Windows.Forms.TextBox();
-               this.Input2 = new System.Windows.Forms.TextBox();
-               this.getResultButton = new System.Windows.Forms.Button();
-               this.ResultOutput = new System.Windows.Forms.TextBox();
+               this.Number1 = new System.Windows.Forms.Button();
+               this.Number2 = new System.Windows.Forms.Button();
+               this.NumScreen = new System.Windows.Forms.Label();
+               this.NumPlus = new System.Windows.Forms.Button();
                this.SuspendLayout();
                // 
-               // HelloLable
+               // Number1
                // 
-               this.HelloLable.AutoSize = true;
-               this.HelloLable.Cursor = System.Windows.Forms.Cursors.Hand;
-               this.HelloLable.Location = new System.Drawing.Point(25, 31);
-               this.HelloLable.Name = "HelloLable";
-               this.HelloLable.Size = new System.Drawing.Size(67, 12);
-               this.HelloLable.TabIndex = 0;
-               this.HelloLable.Text = "Click Here!";
-               this.HelloLable.CursorChanged += new System.EventHandler(this.HelloLable_Click);
-               this.HelloLable.Click += new System.EventHandler(this.HelloLable_Click);
+               this.Number1.Location = new System.Drawing.Point(222, 143);
+               this.Number1.Name = "Number1";
+               this.Number1.Size = new System.Drawing.Size(37, 37);
+               this.Number1.TabIndex = 0;
+               this.Number1.Text = "1";
+               this.Number1.UseVisualStyleBackColor = true;
+               this.Number1.Click += new System.EventHandler(this.Number1_Click);
                // 
-               // Input1
+               // Number2
                // 
-               this.Input1.Location = new System.Drawing.Point(27, 85);
-               this.Input1.Name = "Input1";
-               this.Input1.Size = new System.Drawing.Size(65, 21);
-               this.Input1.TabIndex = 1;
+               this.Number2.Location = new System.Drawing.Point(275, 143);
+               this.Number2.Name = "Number2";
+               this.Number2.Size = new System.Drawing.Size(36, 37);
+               this.Number2.TabIndex = 1;
+               this.Number2.Text = "2";
+               this.Number2.UseVisualStyleBackColor = true;
+               this.Number2.Click += new System.EventHandler(this.Number2_Click);
                // 
-               // Input2
+               // NumScreen
                // 
-               this.Input2.Location = new System.Drawing.Point(98, 85);
-               this.Input2.Name = "Input2";
-               this.Input2.Size = new System.Drawing.Size(65, 21);
-               this.Input2.TabIndex = 2;
+               this.NumScreen.BackColor = System.Drawing.Color.White;
+               this.NumScreen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+               this.NumScreen.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+               this.NumScreen.Location = new System.Drawing.Point(12, 23);
+               this.NumScreen.Name = "NumScreen";
+               this.NumScreen.Size = new System.Drawing.Size(350, 47);
+               this.NumScreen.TabIndex = 2;
+               this.NumScreen.Text = "0";
+               this.NumScreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
                // 
-               // getResultButton
+               // NumPlus
                // 
-               this.getResultButton.Location = new System.Drawing.Point(169, 83);
-               this.getResultButton.Name = "getResultButton";
-               this.getResultButton.Size = new System.Drawing.Size(36, 23);
-               this.getResultButton.TabIndex = 3;
-               this.getResultButton.Text = "=";
-               this.getResultButton.UseVisualStyleBackColor = true;
-               this.getResultButton.Click += new System.EventHandler(this.getResultButton_Click);
-               // 
-               // ResultOutput
-               // 
-               this.ResultOutput.Location = new System.Drawing.Point(211, 85);
-               this.ResultOutput.Name = "ResultOutput";
-               this.ResultOutput.Size = new System.Drawing.Size(100, 21);
-               this.ResultOutput.TabIndex = 4;
+               this.NumPlus.Location = new System.Drawing.Point(222, 87);
+               this.NumPlus.Name = "NumPlus";
+               this.NumPlus.Size = new System.Drawing.Size(37, 39);
+               this.NumPlus.TabIndex = 3;
+               this.NumPlus.Text = "+";
+               this.NumPlus.UseVisualStyleBackColor = true;
+               this.NumPlus.Click += new System.EventHandler(this.NumPlus_Click);
                // 
                // Calculator
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-               this.ClientSize = new System.Drawing.Size(374, 365);
-               this.Controls.Add(this.ResultOutput);
-               this.Controls.Add(this.getResultButton);
-               this.Controls.Add(this.Input2);
-               this.Controls.Add(this.Input1);
-               this.Controls.Add(this.HelloLable);
+               this.ClientSize = new System.Drawing.Size(377, 362);
+               this.Controls.Add(this.NumPlus);
+               this.Controls.Add(this.NumScreen);
+               this.Controls.Add(this.Number2);
+               this.Controls.Add(this.Number1);
                this.Name = "Calculator";
                this.Text = "Calculator";
                this.ResumeLayout(false);
-               this.PerformLayout();
 
           }
 
           #endregion
 
-          private System.Windows.Forms.Label HelloLable;
-          private System.Windows.Forms.TextBox Input1;
-          private System.Windows.Forms.TextBox Input2;
-          private System.Windows.Forms.Button getResultButton;
-          private System.Windows.Forms.TextBox ResultOutput;
+          private System.Windows.Forms.Button Number1;
+          private System.Windows.Forms.Button Number2;
+          private System.Windows.Forms.Label NumScreen;
+          private System.Windows.Forms.Button NumPlus;
      }
 }
 
